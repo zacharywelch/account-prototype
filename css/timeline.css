@@ -1,0 +1,39 @@
+.timeline { position: relative; }
+.timeline:before { 
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15px;
+  height: 100%;
+  width: 2px;
+  background: #eee;
+  border-radius: 3px;  
+}
+
+.timeline > li { 
+  margin-bottom: 20px; 
+  position: relative;
+}
+
+.event-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #e5e5e5;
+  background: #fff;
+}
+.event-icon.success { border-color: #56b881; }
+.event-icon.danger { border-color: #ee6565; }
+
+.event-icon .icon {
+  display: block;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;  
+}
+
+.event-body { margin-left: 50px; }
+.event-body > p { margin-bottom: 5px; }

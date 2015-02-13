@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <title>Axiom</title>
+
+  <link href='framework/css/cb-design-framework.css' rel='stylesheet' />
+  <link href='css/site.css' rel='stylesheet' />
+  <link href='css/timeline.css' rel='stylesheet' />
+  <style>
+    .hovercard { 
+      width: 245px; 
+      -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .hovercard .avatar { 
+      top: -40px;
+      margin-bottom: -40px;
+    }
+    .hovercard .avatar img {
+      width: 80px;
+      height: 80px;
+      max-width: 80px;
+      max-height: 80px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;      
+    }
+    .text-default { color: #404040; }
+  </style>  
+</head>
+
+<body class='fill-light account'>
+  <div class='navbar fill-white keyline-bottom col-sm-12 animate clearfix'>
+    <div class='container-fluid contain'>
+      <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
+        <a class='logo pad1y pull-left text-left' href='/en'>Axiom</a>
+
+        <div class='primary small strong row2'>
+          <form class='search pad0 hidden-xs'>
+            <fieldset class='with-icon quiet search'>
+              <i class='icon icon-search'></i>
+              <input type='text' class='short' placeholder='Search Axiom' data-toggle='clear'>
+              <!-- <i class='icon icon-remove-sign clear quiet'></i> -->
+            </fieldset>                
+          </form>
+          <a href='#fakelink' class='hidden-xs quiet animate round pad1 
+            truncate inline'>Help</a>
+          <a href='#fakelink' class='hidden-xs quiet animate round pad1 
+            truncate inline'>Tools</a>
+          <a href='#dropdown' class='visible-xs authmenu keyline-all droplink 
+            quiet round animate pull-right center'>
+            <i class='icon icon-list'></i>
+          </a>
+          <a href='#dropdown' class='hidden-xs authmenu droplink quiet pad1 block round animate pull-right'>
+            <img class='avatar round' src='https://www.gravatar.com/avatar/2f56248796231593ce00c562fae2b1da.jpg?d=mm'>
+            zwelch
+          </a>
+
+          <div class='btn-group tabs col-sm-3 pull-right hidden-xs fill-purple dark round'>
+            <a href='#fakelink' class='btn btn-primary col-sm-6 quiet' data-toggle='tab'><i class='icon icon-inbox-alt pad0r'></i>Accounts</a>
+            <a href='#fakelink' class='btn btn-primary col-sm-6 quiet' data-toggle='tab'><i class='icon icon-briefcase pad0r'></i>Orders</a>
+          </div>
+
+          <div class='dropdown fill-white keyline-all round animate'>
+            <div class='profile contain keyline-bottom pad1'>
+              <a href='#fakelink' class='profile-icon'>
+                <img class='avatar' src='https://www.gravatar.com/avatar/2f56248796231593ce00c562fae2b1da.jpg?d=mm'>
+              </a>
+              <a href='#fakelink' class='truncate'>
+                Lorem<br>
+                <span class='quiet'>(ipsum dolor)</span>
+              </a>
+            </div>
+            <div class='keyline-bottom pad1'>
+              <a href='#fakelink'>Account</a>
+              <a href='#fakelink' id='signout'>Sign out</a>
+            </div>
+            <div class='visible-xs keyline-bottom pad1'>
+              <a href='#fakelink'>Help</a>
+              <a href='#fakelink'>Tools</a>
+            </div>
+          </div><!-- ./dropdown -->   
+        </div><!-- ./primary -->       
+
+      </nav>
+
+      <div id='popup-search' class='popup down with-icon popup-md animate fill-white keyline-all small pad2 round'>
+        <div class='pad2 pin-left'>
+          <div class='fill-purple img-circle graphic-md dark'>
+            <i class='icon icon-lg icon-search'></i>
+          </div>
+        </div>
+        <h4>Search</h4>
+        Porta pellentesque <strong>pulvinar</strong> pellentesque port, phasellus? Risus egestas et porta, nisi.
+        <div class='text-right'>
+          <a href='#fakelink' class='strong'>
+            <i class='icon icon-question-sign'></i>
+            Learn more
+          </a>
+        </div>
+      </div><!-- ./popup search -->
+
+    </div>
+  </div><!-- ./navbar -->
+
+  <div class='container-fluid clearfix content-container'>
+    <div class='contain clearfix pad4y'>
+      
+      <aside class='col-sm-3 sidebar'>
+
+        <div class='box round fill-white center account-profile'>
+        
+          <img src='img/astronaut3.png' class='hidden-xs'>
+
+          <section class='pad1'>
+            
+            <h2>Robert Half</h2>
+            <p class='quiet'>AT-123456789</p>
+
+            <div class='clearfix space-bottom hidden-sm hidden-xs'>
+              <div class='col-md-6'>
+                <strong class='small quiet block pad0x'>Lorem Ipsum</strong>
+                <h3 class='pad0'><a href='#fakelink'>$10k</a></h3>
+              </div>
+              <div class='col-md-6 keyline-left'>
+                <strong class='small quiet block pad0x'>Lorem Ipsum</strong>
+                <h3 class='pad0'><a href='#fakelink'>$10k</a></h3>
+              </div>
+            </div>
+
+            <div class='visible-sm text-left small strong'>
+              <div class='keyline-bottom pad0 clearfix'>
+                <span class='quiet col-sm-9'>Lorem Ipsum</span>
+                <a href='#fakelink' class='col-sm-3 text-right'>$10k</a>
+              </div>
+
+              <div class='keyline-bottom pad0 space-bottom clearfix'>
+                <span class='quiet col-sm-9'>Lorem Ipsum</span>
+                <a href='#fakelink' class='col-sm-3 text-right'>$10k</a>
+              </div>
+            </div>
+
+            <div class='btn-group space-bottom'>
+              <a class='btn btn-loud' href='profile.html'>
+                <i class='icon icon-edit pad0r hidden-sm'></i>Manage Account
+              </a>
+              <button class='btn btn-loud dropdown-toggle' data-toggle='dropdown'>
+                <span class='caret'></span>
+                <span class='sr-only'>Toggle Dropdown</span>
+              </button>
+              <ul class='dropdown-menu pull-right'>
+                <li><a href='#fakelink'>Dropdown link</a></li>
+                <li><a href='#fakelink'>Dropdown link</a></li>
+              </ul>
+            </div>          
+
+          </section>
+
+        </div>
+
+        <div class='box round fill-white hidden-xs'>
+          <div class='pad1y pad2x keyline-bottom'>
+            <h4>Contacts</h4>
+          </div>
+          <div class='pad2y pad2x'>
+            <div class='contain clearfix space-bottom'>
+              <div class='col-sm-3 pin-left'>
+                <a href='#fakelink' data-toggle='hovercard' data-target='#hovercard-away'>
+                  <img src='img/kerem.png' class='img-circle' width='38'>
+                </a>
+              </div>
+              <div class='col-sm-9 col-sm-offset-3 media-body'>
+                <h5 class='truncate'>
+                  <a href='#fakelink' class='text-default' data-toggle='hovercard' data-target='#hovercard-away'>
+                    Kerem Seur
+                  </a>
+                </h5>
+                <small class='quiet truncate'>primary contact</small>
+              </div>
+            </div>
+            <div class='contain clearfix space-bottom'>
+              <div class='col-sm-3 pin-left'>
+                <a href='#fakelink' data-toggle='hovercard' data-target='#hovercard-away'>
+                  <img src='img/cederholm.jpeg' class='img-circle' width='38'>
+                </a>
+              </div>
+              <div class='col-sm-9 col-sm-offset-3 media-body'>
+                <h5 class='truncate'>
+                  <a href='#fakelink' class='text-default' data-toggle='hovercard' data-target='#hovercard-away'>
+                    Dan Cederholm
+                  </a>
+                </h5>
+                <small class='quiet truncate'>billing contact</small>
+              </div>
+            </div>
+            <div class='contain clearfix space-bottom1 col-sm-12'>
+              <div class='col-sm-3 pin-left'>
+                <a href='#fakelink' data-toggle='hovercard' data-target='#hovercard-away'>                
+                  <img src='img/melissa.jpg' class='img-circle' width='38'>
+                </a>
+              </div>
+              <div class='col-sm-9 col-sm-offset-3 media-body'>
+                <h5 class='truncate'>
+                  <a href='#fakelink' class='text-default' data-toggle='hovercard' data-target='#hovercard-away'>
+                    Melissa Keizer
+                  </a>
+                </h5>
+                <small class='quiet truncate'>sales representative</small>
+              </div>
+            </div>
+            <a href='#fakelink'>
+              <strong class='small'>+ more</strong>
+            </a>
+          </div>
+        </div>
+
+        <div class='box round fill-white hidden-xs'>
+          <div class='pad1y pad2x keyline-bottom'>
+            <h4>Subaccounts</h4>
+          </div>
+          <div class='pad2y pad2x'>
+            <div class='contain clearfix space-bottom'>
+              <div class='col-sm-3 pin-left'>
+                <img src='img/astronaut1.png' class='img-rounded' width='38'>
+              </div>
+              <div class='col-sm-9 col-sm-offset-3 media-body'>
+                <h5 class='truncate'>Robert Half Southeast</h5>
+                <small class='quiet truncate'>$200,000</small>
+              </div>
+            </div>
+            <div class='contain clearfix space-bottom'>
+              <div class='col-sm-3 pin-left'>
+                <img src='img/astronaut2.png' class='img-rounded' width='38'>
+              </div>
+              <div class='col-sm-9 col-sm-offset-3 media-body'>
+                <h5 class='truncate'>Robert Half Northeast</h5>
+                <small class='quiet truncate'>$100,000</small>
+              </div>
+            </div>
+            <div class='contain clearfix space-bottom1 col-sm-12'>
+              <div class='col-sm-3 pin-left'>
+                <img src='img/astronaut3.png' class='img-rounded' width='38'>
+              </div>
+              <div class='col-sm-9 col-sm-offset-3 media-body'>
+                <h5 class='truncate'>Robert Half West</h5>
+                <small class='quiet truncate'>$50,000</small>
+              </div>
+            </div>
+            <a href='#fakelink'>
+              <strong class='small'>more subaccounts (23) <i class='icon icon-arrow-right pad0l'></i></strong>
+            </a>
+          </div>
+        </div>        
+
+      </aside>
+      
+      <div class='col-sm-9 pad1l'>
+        
+        <div class='col-xs-12 clearfix space-bottom'>
+          <div class='btn-group col-xs-12 mobile-cols clearfix'>
+            <a href='overview.html' class='btn btn-primary col-sm-2 col-xs-3'>Overview</a>
+            <a href='#fakelink' class='btn btn-primary col-sm-2 hidden-xs'>Orders</a>
+            <a href='#fakelink' class='btn btn-primary col-sm-2 col-xs-3'>Invoices</a>
+            <a href='#fakelink' class='btn btn-primary col-sm-2 hidden-xs'>Payments</a>
+            <a href='#fakelink' class='btn btn-primary active col-sm-2 col-xs-3'>Activity</a>
+            <a href='journal.html' class='btn btn-primary col-sm-2 col-xs-3'>Journal</a>
+          </div>        
+        </div>
+
+        <div id='content' class='fill-white box round pad4 prose'>
+
+          <div class='clearfix space-bottom1 comments-heading'>
+            <h3 class='pull-left'>75 items</h3>
+            <div class='dropdown pull-right'>
+              <a data-target='#' href='#fakelink' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false' class='quiet years'>
+                Years <span class='caret'></span>
+              </a>
+              <ul class='dropdown-menu' role='menu' aria-labelledby='dLabel'>
+                <li><a href='#fakelink'>All</a></li>
+                <li><a href='#fakelink'>2014</a></li>
+                <li><a href='#fakelink'>2013</a></li>
+                <li><a href='#fakelink'>2012</a></li>
+                <li><a href='#fakelink'>2011</a></li>
+                <li><a href='#fakelink'>2010</a></li>
+                <li><a href='#fakelink'>2009</a></li>
+              </ul>
+            </div>
+
+            <a href='#fakelink' class='pull-right quiet years hidden'>Years <i class='icon icon-desc'></i></a>
+          </div>
+
+          <ul class='timeline space-bottom4'>
+            
+            <li>
+              <div class='event-icon quiet'>
+                <i class='icon icon-refresh'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  <a href='#fakelink'>Mary Jane</a> replaced <a href='#fakelink'>John Smith</a> as the new <strong>Account Management Representative</strong>.
+                </p>
+                <small class='quiet'>Jan 21, 2014 at 3:09 pm</small>
+              </div>
+            </li>
+
+            <li>
+              <div class='event-icon success'>
+                <i class='icon icon-shopping-cart'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  <strong>Job Branding</strong> renewed.
+                </p>
+                <small class='quiet'>Aug 10, 2013 at 7:30 am</small>
+              </div>
+            </li>
+
+            <li>
+              <div class='event-icon quiet'>
+                <i class='icon icon-refresh'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  <a href='#fakelink'>John Smith</a> replaced <a href='#fakelink'>Mary Jane</a> as the new <strong>Sales Representative</strong>.
+                </p>
+                <small class='quiet'>Jan 2, 2014 at 5:30 pm</small>
+              </div>
+            </li>
+          
+            <li>
+              <div class='event-icon danger'>
+                <i class='icon icon-arrow-down'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  Account downgraded from <strong>platinum</strong> to <strong>silver</strong> status.
+                </p>
+                <small class='quiet'>Jan 15, 2014 at 9:00 am</small>
+              </div>
+            </li>
+
+            <li>
+              <div class='event-icon quiet'>
+                <i class='icon icon-refresh'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  <a href='#fakelink'>Mary Jayne</a> replaced <a href='#fakelink'>John Smith</a> as the new <strong>Customer Service Representative</strong>.
+                </p>
+                <small class='quiet'>Jan 2, 2014 at 5:10 pm</small>
+              </div>
+            </li>
+
+            <li>
+              <div class='event-icon quiet'>
+                <i class='icon icon-refresh'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  <a href='#fakelink'>John Smith</a> replaced <a href='#fakelink'>Mary Jane</a> as the new <strong>Sales Representative</strong>.
+                </p>
+                <small class='quiet'>Jan 2, 2014 at 5:30 pm</small>
+              </div>
+            </li>
+
+            <li>
+              <div class='event-icon danger'>
+                <i class='icon icon-trash'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  Order <a href='#fakelink'>CT-2738512</a> deleted.
+                </p>
+                <small class='quiet'>Nov 5, 2013 at 1:05 pm</small>
+              </div>
+            </li>
+
+            <li>
+              <div class='event-icon success'>
+                <i class='icon icon-thumbs-up'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  Order <a href='#fakelink'>CT-1234567</a> approved by <a href='#fakelink' data-toggle='hovercard' data-target='#hovercard-home'>Norman Mangina</a>.
+                </p>
+                <small class='quiet'>Jul 2, 2013 at 3:09 pm</small>
+              </div>
+            </li>
+
+            <li>
+              <div class='event-icon success'>
+                <i class='icon icon-thumbs-up'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  Order <a href='#fakelink'>CT-7654321</a> approved by Irene Mcgreevy.
+                </p>
+                <small class='quiet'>Jul 2, 2013 at 2:45 pm</small>
+              </div>
+            </li>
+
+            <li>
+              <div class='event-icon quiet'>
+                <i class='icon icon-refresh'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  <a href='#fakelink'>Mary Jane</a> replaced <a href='#fakelink'>John Smith</a> as the new <strong>Account Management Representative</strong>.
+                </p>
+                <small class='quiet'>Jan 15, 2014 at 9:00 am</small>
+              </div>
+            </li>
+
+            <li>
+              <div class='event-icon success'>
+                <i class='icon icon-arrow-up'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  Account upgraded from <strong>silver</strong> to <strong>platinum</strong> status.
+                </p>
+                <small class='quiet'>Jan 20, 2014 at 2:45 pm</small>
+              </div>
+            </li>
+
+            <li>
+              <div class='event-icon danger'>
+                <i class='icon icon-lock'></i>
+              </div>
+              <div class='event-body'>
+                <p>
+                  <a href='#fakelink'>John Smith</a> was put on hold due to inactivity. Contact <a href='#fakelink'>Trust and Site Security</a> for help.
+                </p>
+                <small class='quiet'>Jul 3, 2013 at 1:30 am</small>
+              </div>
+            </li>
+
+          </ul>
+
+          <section class='pagination-container center'>
+            <a class='btn btn-success btn-wide' href='#fakelink'>Show more</a>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </div><!-- ./content -->
+
+  <div class='footer keyline-top pad4y fill-white clearfix small hide-mobile'>
+    <div class='container-fluid'>
+      <div class='col-sm-6 mobile-cols'>
+        <div class='col-sm-3'>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Lorem</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Team</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Ispum</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Dolor</a>
+          
+        </div>
+        <div class='col-sm-3'>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Sit</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Amet</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Consecter</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Epsidem</a>
+          
+        </div>
+        <div class='col-sm-3'>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Help</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Lorem</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Status</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Contact</a>
+          
+        </div>
+        <div class='col-sm-3'>
+          <p>
+            <span style='padding-bottom:10px;' class='keyline-bottom'>Tools</span>
+          </p>
+
+          <a class='col-sm-12 strong' href='#fakelink'>Ipsum</a>
+          
+          <a class='col-sm-12 strong' href='#fakelink'>Dolor</a>
+          
+        </div>
+      </div>
+      <div class='col-sm-6 newsletter'>
+        <form class='space-bottom'>
+          <fieldset class='with-icon'>
+            <div class='input-group'>
+              <i class='icon icon-envelope quiet'></i>
+              <input type='text' placeholder='Email address'>
+              <div class='input-group-btn'>
+                <input type='submit' value='Subscribe' class='btn btn-default pad4x'>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        Lorem ipsum dolor <a href='#fakelink' class='strong'>Sit</a> amet <a href='#fakelink' class='strong'>Consecutor</a>
+      </div>
+    </div>
+  </div><!-- ./footer -->
+
+  <div id='hovercard-home' class='box fill-white round center hovercard clip hidden' style='position:absolute'>
+    <div class='row6 fill-blue round-top'></div>
+    <div class='avatar contain space-bottom1'>
+      <img src='img/kerem.png' class='space-bottom1'>
+    </div>
+    <h3>Norman Mangina</h3>
+    <h5 class='quiet'>Director of Finance</h5>
+    <h5 class='quiet'>Chicago, IL</h5>
+    <div class='pad2 space-bottom1'>
+      <a href='#fakelink' class='btn btn-primary'>Become</a>
+    </div>
+    <a href='#fakelink' class='block quiet col-sm-6 pad1y pad2x keyline-top keyline-right fill-light'>
+      <i class='icon icon-phone pad0r'></i>Call
+    </a>              
+    <a href='#fakelink' class='block quiet col-sm-6 pad1y pad2x keyline-top  fill-light'>
+      <i class='icon icon-envelope pad0r'></i>Message
+    </a>              
+  </div>                          
+
+  <div id='hovercard-away' class='box fill-white round center hovercard clip hidden' style='position:absolute'>
+    <div class='row6 fill-red round-top'></div>
+    <div class='avatar contain space-bottom1'>
+      <img src='img/cederholm.jpeg' class='space-bottom1'>
+    </div>
+    <h3>Dan Cederholm</h3>
+    <h5 class='quiet'>Robert Half International</h5>
+    <h5 class='quiet'>Primary Contact</h5>
+    <div class='pad2 space-bottom1'>
+      <a href='#fakelink' class='btn btn-danger'>Become</a>
+    </div>
+    <a href='#fakelink' class='block quiet col-sm-6 pad1y pad2x keyline-top keyline-right fill-light'>
+      <i class='icon icon-phone pad0r'></i>Call
+    </a>              
+    <a href='#fakelink' class='block quiet col-sm-6 pad1y pad2x keyline-top  fill-light'>
+      <i class='icon icon-envelope pad0r'></i>Message
+    </a>              
+  </div>                          
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
+  <script src='framework/js/button.js'></script>
+  <script src='framework/js/dropdown.js'></script>
+  <script src='framework/js/modal.js'></script>
+  <script src='framework/js/tab.js'></script>
+  <script src='framework/js/offcanvas.js'></script>
+  <script src='framework/js/popup.js'></script>
+  <script src='framework/js/clear.js'></script>
+  <script src='framework/js/transition.js'></script>
+  <script src='js/site.js'></script>
+  <script src='js/jquery.hoverIntent.minified.js'></script>
+  <script>
+    $(function() {
+      $('[data-toggle="hovercard"]').hoverIntent({
+        over: showCard,
+        interval: 300
+      });
+
+      $('.hovercard').hover(
+        function() { $(this).removeClass('hidden') },
+        function() { $(this).addClass('hidden') }
+      );
+    });
+
+    function showCard() { 
+      var offset = $(this).offset();
+      var target = $(this).data('target')
+      $(target).css({ top: offset.top + 25, left: offset.left })
+        .removeClass('hidden');
+    }
+  </script>  
+</body>
+</html>

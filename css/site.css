@@ -1,0 +1,288 @@
+/* Global styles
+------------------------------------------------------- */
+
+/* Prevents animation on initial page load. */
+body:not(.animate) .animate {
+  -webkit-transition:none;
+     -moz-transition:none;
+      -ms-transition:none;
+          transition:none;
+}
+
+.debug_dump {
+  background: transparent;
+  margin: 20px 0 40px;
+  text-align: center;
+  border: none;  
+}
+
+#wrap {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+
+/* Search
+------------------------------------------------------- */
+
+form.search { 
+  position: absolute; 
+  left: 80px; 
+  z-index: 1;
+}
+form.search .icon-search { left: 12px; }
+form.search input[type=text] { 
+  border-radius: 15px; 
+  background: #f8f8f8; /* fill-light */
+  width: 165px;
+  transition: all .125s;
+}
+form.search input[type=text]:focus { 
+  background: #fff;
+  width: 275px; 
+}
+
+#popup-search { 
+  top: 50px;
+  left: 115px;
+  bottom: initial;
+}
+
+/* Images
+------------------------------------------------------- */
+
+.big-illustration {
+  border: 6px solid; 
+  border-radius: 200px;  
+  display: block; 
+  font-size: 90px; 
+  height: 202px; 
+  width: 200px; 
+  margin: 0 auto 12px; 
+  padding: 50px; 
+  text-align: center; 
+  line-height: 1;
+}
+
+
+/* Flash
+------------------------------------------------------- */
+
+#wrap > .alert i {
+  font-size: 22px;
+  line-height: 20px;
+  float: left;
+  margin-right: 8px;
+}
+
+.fadein {
+  opacity: 1;
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+     -moz-animation: fadein 1s; /* Firefox */
+      -ms-animation: fadein 1s; /* Internet Explorer */
+       -o-animation: fadein 1s; /* Opera */
+          animation: fadein 1s;  
+}
+
+
+/* Animations
+------------------------------------------------------- */
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.active-filters .btn-close {
+  color: #bfbfbf;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+  font-size: 17px;
+}
+
+.active-filters .btn-close:hover,
+.active-filters .btn-close:focus {
+  color: #7f7f7f;
+}
+
+/* Comments control
+------------------------------------------------------- */
+
+ol.comments {
+  list-style: none;
+  margin: 0;
+}
+
+ol.comments > li {
+  padding-left: 70px;
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 75px;
+}
+
+ol.comments .avatar {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 50px;  
+  border-radius: 6px;
+}
+
+ol.comments .user {
+  font-family: 'Open Sans Bold', sans-serif;
+  font-weight: normal;  
+  text-transform: lowercase;
+}
+
+ol.comments .new-comment {
+  margin-bottom: 13px;
+}
+
+.comments-heading .filter {
+  margin-top: -2px;
+}
+
+.time-ago {
+  cursor: help;
+  text-transform: lowercase;
+}
+
+/* List items
+------------------------------------------------------- */
+
+.list-items > li:hover,
+.list-items > li:focus {
+  background-color: #fbfbfb;
+  cursor: pointer;
+}
+
+.list-items > li.header:hover,
+.list-items > li.header:focus {
+  background-color: inherit;
+  cursor: default;
+}
+
+.active-filters .btn-close {
+  color: #bfbfbf;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+  font-size: 17px;
+}
+
+/* Active filters
+------------------------------------------------------- */
+
+.active-filters .btn-close:hover,
+.active-filters .btn-close:focus {
+  color: #7f7f7f;
+}
+
+/* Slidelink
+------------------------------------------------------- */
+
+.slidelink .icon-chevron-right,
+.slidelink .icon-chevron-down {
+  margin-right: 13px;
+}
+
+/* Sort Styles
+------------------------------------------------------- */
+
+a.sortable {
+  color: inherit;
+  position:relative;
+  white-space: nowrap;
+}
+
+a.sortable .icon { margin-left: 3px; }
+
+.amount a.sortable .icon {
+  position: absolute;
+  left: -18px;
+  margin-left: 0;
+  top: 2px;  
+}
+
+
+/* Responsive styles
+------------------------------------------------------- */
+
+@media (max-width: 899px) {
+  #wrap {
+    border: none;
+    margin: 0;
+  }
+
+  .list-items > li.pad2x,
+  .list-items > li.pad2 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
+
+@media (min-width: 900px) {
+  form.search { left: 100px; }  
+}
+
+
+/* New Styles */
+
+aside.sidebar { padding-right: 20px; }
+.row15 { height: 503px; }
+.years { line-height: 28px; }
+
+@media only screen and (max-width: 991px) { 
+  aside.sidebar { padding-right: 5px; }
+  aside.sidebar .btn-group { margin-bottom: 10px; }
+  aside.sidebar > .box > div { padding: 10px; }
+  aside.sidebar h2 + p { margin-bottom: 10px; }
+  #content { padding: 30px; }
+}
+
+@media only screen and (max-width: 1120px) {
+  aside.sidebar .media-body { padding-left: 5px; }      
+}
+
+@media only screen and (max-width: 767px) {
+  body.fill-light { background: #fff; }
+  aside.sidebar { padding-right: 0; }  
+  .container-fluid > .pad4y { padding-top: 20px; padding-bottom: 20px; }
+  .box { border-radius: 0; margin-bottom: 0; }
+  .box:not(:first-child) { border-top: none; } 
+
+  /*body.activity .container-fluid { padding: 0; }  */
+  .account .content-container { padding: 0; }  
+  .account .content-container > .pad4y { padding: 0; }
+  .account .content-container > .pad4y > .col-sm-9 { padding: 20px; }  
+  .account .profile { 
+    border: none;
+    padding: 10px 0;
+  }
+  .account .profile section { padding: 0; }
+  .account #content {
+    border: none;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
