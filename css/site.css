@@ -127,7 +127,7 @@ form.search input[type=text]:focus {
 /* Comments control
 ------------------------------------------------------- */
 
-ol.comments {
+/*ol.comments {
   list-style: none;
   margin: 0;
 }
@@ -164,7 +164,7 @@ ol.comments .new-comment {
 .time-ago {
   cursor: help;
   text-transform: lowercase;
-}
+}*/
 
 /* List items
 ------------------------------------------------------- */

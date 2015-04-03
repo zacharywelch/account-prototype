@@ -4,12 +4,16 @@
   <meta charset='UTF-8'/>
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <title>Axiom</title>
-
-  <link href='framework/css/cb-design-framework.css' rel='stylesheet' />
+  <link href='kabu/stylesheets/kabu.css' rel='stylesheet' />
   <link href='css/site.css' rel='stylesheet' />
+  <style>
+    .account.journal header .rounded-toggle,
+    .account.journal .time-ago { margin-top: -1px; }
+    .media-body.with-input { width: 1%; }
+  </style>
 </head>
 
-<body class='fill-light account'>
+<body class='fill-light account journal'>
   <div class='navbar fill-white keyline-bottom col-sm-12 animate clearfix'>
     <div class='container-fluid contain'>
       <nav class='col-sm-12 text-right pad1y contain clearfix noprint'>
@@ -236,81 +240,114 @@
           </div>        
         </div>
 
-        <div id='content' class='fill-white box round pad4 prose'>
+        <div id='content' class='fill-white box round pad4 breathe'>
 
-          <div class='clearfix space-bottom1 comments-heading'>
-            <h3 class='pull-left'>7 journal notes</h3>
-            <div class='rounded-toggle inline pull-right filter'>
-              <input id='newest' type='radio' name='rtoggle' value='newest' checked='checked'>
-              <label for='newest'>newest</label>
-              <input id='oldest' type='radio' name='rtoggle' value='oldest'>
-              <label for='oldest'>oldest</label>
+          <header class='clearfix space-bottom'>
+            <h3 class='col-xs-6'>7 journal notes</h3>
+            <div class='col-xs-6 text-right'>
+              <div class='rounded-toggle inline'>
+                <input id='newest' type='radio' name='rtoggle' value='newest' checked='checked'>
+                <label for='newest'>newest</label>
+                <input id='oldest' type='radio' name='rtoggle' value='oldest'>
+                <label for='oldest'>oldest</label>
+              </div>
+            </div>            
+          </header>
+          
+          <div class='media pad0y'>
+            <a class='media-left pad1r' href='#fakelink'>
+              <img src='img/zac.jpeg' class='img-rounded' width='50'>
+            </a>
+            <div class='media-body pad1l with-input'>
+              <textarea class='stretch' placeholder='Enter a note...'></textarea>
             </div>
           </div>
-
-          <ol class='comments'>
-            <li class='new-comment'>
-              <img class='avatar' src='img/zac.jpeg'>
-              <textarea class='stretch' placeholder='Enter a note...'></textarea>
-            </li>
-            <li>
-              <img class='avatar' src='img/cederholm.jpeg'>
-              <a href='#fakelink' class='user'>Dan Cederholm</a>              
-              <small class='inline pull-right quiet'>03/27/2014 at 12:30pm</small>
+          <div class='media'>
+            <a class='media-left pad1r pad0y' href='#fakelink'>
+              <img src='img/cederholm.jpeg' class='img-rounded' width='50'>
+            </a>
+            <div class='media-body pad1l'>
+              <small class='pull-right quiet time-ago'>
+                03/27/2014 at 12:30pm
+              </small>
+              <h4><a href='#fakelink'>dan cederholm</a></h4>
               <p>
                 Sed tincidunt in egestas et vel nunc vel augue urna nascetur, diam? Porttitor, dictumst porttitor. Habitasse augue sed facilisis pulvinar, odio, lorem sagittis lundium adipiscing amet? Nunc! Et urna.
               </p>
-            </li>
-            <li>
-              <img class='avatar' src='img/kerem.png'>
-              <a href='#fakelink' class='user'>Kerem Suer</a>              
-              <small class='inline pull-right quiet'>03/27/2014 at 12:30pm</small>
+            </div>
+          </div>
+          <div class='media'>
+            <a class='media-left pad1r pad0y' href='#fakelink'>
+              <img src='img/kerem.png' class='img-rounded' width='50'>
+            </a>
+            <div class='media-body pad1l'>
+              <small class='pull-right quiet time-ago'>03/27/2014 at 12:30pm</small>
+              <h4><a href='#fakelink'>kerem seur</a></h4>
               <p>
                 Sed tincidunt in egestas et vel nunc vel augue urna nascetur, diam? Porttitor, dictumst porttitor. Habitasse augue sed facilisis pulvinar, odio, lorem sagittis lundium adipiscing amet? Nunc! Et urna.
               </p>
-            </li>
-            <li>
-              <img class='avatar' src='img/melissa.jpg'>
-              <a href='#fakelink' class='user'>Melissa Keizer</a>              
-              <small class='inline pull-right quiet'>03/27/2014 at 12:30pm</small>
+            </div>
+          </div>
+          <div class='media'>
+            <a class='media-left pad1r pad0y' href='#fakelink'>
+              <img src='img/melissa.jpg' class='img-rounded' width='50'>
+            </a>
+            <div class='media-body pad1l'>
+              <small class='pull-right quiet time-ago'>03/27/2014 at 12:30pm</small>
+              <h4><a href='#fakelink'>melissa keizer</a></h4>
               <p>
                 Sed tincidunt in egestas et vel nunc vel augue urna nascetur, diam? Porttitor, dictumst porttitor. Habitasse augue sed facilisis pulvinar, odio, lorem sagittis lundium adipiscing amet? Nunc! Et urna.
               </p>
-            </li>
-            <li>
-              <img class='avatar' src='img/kerem.png'>
-              <a href='#fakelink' class='user'>Kerem Suer</a>              
-              <small class='inline pull-right quiet'>03/27/2014 at 12:30pm</small>
+            </div>
+          </div>                   
+          <div class='media'>
+            <a class='media-left pad1r pad0y' href='#fakelink'>
+              <img src='img/kerem.png' class='img-rounded' width='50'>
+            </a>
+            <div class='media-body pad1l'>
+              <small class='pull-right quiet time-ago'>03/27/2014 at 12:30pm</small>
+              <h4><a href='#fakelink'>kerem seur</a></h4>
               <p>
                 Sed tincidunt in egestas et vel nunc vel augue urna nascetur, diam? Porttitor, dictumst porttitor. Habitasse augue sed facilisis pulvinar, odio, lorem sagittis lundium adipiscing amet? Nunc! Et urna.
               </p>
-            </li>
-            <li>
-              <img class='avatar' src='img/townsend.png'>
-              <a href='#fakelink' class='user'>Cole Townsend</a>              
-              <small class='inline pull-right quiet'>03/27/2014 at 12:30pm</small>
+            </div>
+          </div>                   
+          <div class='media'>
+            <a class='media-left pad1r pad0y' href='#fakelink'>
+              <img src='img/townsend.png' class='img-rounded' width='50'>
+            </a>
+            <div class='media-body pad1l'>
+              <small class='pull-right quiet time-ago'>03/27/2014 at 12:30pm</small>
+              <h4><a href='#fakelink'>cole townsend</a></h4>
               <p>
                 Sed tincidunt in egestas et vel nunc vel augue urna nascetur, diam? Porttitor, dictumst porttitor. Habitasse augue sed facilisis pulvinar, odio, lorem sagittis lundium adipiscing amet? Nunc! Et urna.
               </p>
-            </li>
-            <li>
-              <img class='avatar' src='img/zac.jpeg'>
-              <a href='#fakelink' class='user'>Zachary Welch</a>              
-              <small class='inline pull-right quiet'>03/27/2014 at 12:30pm</small>
+            </div>
+          </div>                   
+          <div class='media'>
+            <a class='media-left pad1r pad0y' href='#fakelink'>
+              <img src='img/zac.jpeg' class='img-rounded' width='50'>
+            </a>
+            <div class='media-body pad1l'>
+              <small class='pull-right quiet time-ago'>03/27/2014 at 12:30pm</small>
+              <h4><a href='#fakelink'>zachary welch</a></h4>
               <p>
                 Sed tincidunt in egestas et vel nunc vel augue urna nascetur, diam? Porttitor, dictumst porttitor. Habitasse augue sed facilisis pulvinar, odio, lorem sagittis lundium adipiscing amet? Nunc! Et urna.
               </p>
-            </li>
-            <li>
-              <img class='avatar' src='img/cederholm.jpeg'>
-              <a href='#fakelink' class='user'>Dan Cederholm</a>              
-              <small class='inline pull-right quiet'>03/27/2014 at 12:30pm</small>
+            </div>
+          </div>
+          <div class='media'>
+            <a class='media-left pad1r pad0y' href='#fakelink'>
+              <img src='img/cederholm.jpeg' class='img-rounded' width='50'>
+            </a>
+            <div class='media-body pad1l'>
+              <small class='pull-right quiet time-ago'>03/27/2014 at 12:30pm</small>
+              <h4><a href='#fakelink'>dan cederholm</a></h4>
               <p>
                 Sed tincidunt in egestas et vel nunc vel augue urna nascetur, diam? Porttitor, dictumst porttitor. Habitasse augue sed facilisis pulvinar, odio, lorem sagittis lundium adipiscing amet? Nunc! Et urna.
               </p>
-            </li>
-          </ol>
-
+            </div>
+          </div>          
         </div>
 
       </div>
@@ -382,14 +419,7 @@
   </div><!-- ./footer -->
 
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
-  <script src='framework/js/button.js'></script>
-  <script src='framework/js/dropdown.js'></script>
-  <script src='framework/js/modal.js'></script>
-  <script src='framework/js/tab.js'></script>
-  <script src='framework/js/offcanvas.js'></script>
-  <script src='framework/js/popup.js'></script>
-  <script src='framework/js/clear.js'></script>
-  <script src='framework/js/transition.js'></script>
+  <script scr='kabu/javascripts/kabu.js'></script>
   <script src='js/site.js'></script>
 </body>
 </html>
