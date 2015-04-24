@@ -249,19 +249,14 @@ a.sortable .icon { margin-left: 3px; }
 /* New Styles */
 
 aside.sidebar { padding-right: 20px; }
-.row15 { height: 503px; }
 .years { line-height: 28px; }
 
 @media only screen and (max-width: 991px) { 
   aside.sidebar { padding-right: 5px; }
-  aside.sidebar .btn-group { margin-bottom: 10px; }
   aside.sidebar > .box > div { padding: 10px; }
-  aside.sidebar h2 + p { margin-bottom: 10px; }
-  #content { padding: 30px; }
-}
-
-@media only screen and (max-width: 1120px) {
-  aside.sidebar .media-body { padding-left: 5px; }      
+  .account-profile .btn-group,
+  .account-profile p { margin-bottom: 10px; }
+  body.account #content { padding: 30px; }
 }
 
 @media only screen and (max-width: 767px) {
@@ -271,7 +266,6 @@ aside.sidebar { padding-right: 20px; }
   .box { border-radius: 0; margin-bottom: 0; }
   .box:not(:first-child) { border-top: none; } 
 
-  /*body.activity .container-fluid { padding: 0; }  */
   .account .content-container { padding: 0; }  
   .account .content-container > .pad4y { padding: 0; }
   .account .content-container > .pad4y > .col-sm-9 { padding: 20px; }  
