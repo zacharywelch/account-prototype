@@ -7,6 +7,9 @@
 
   <link href='kabu/stylesheets/kabu.css' rel='stylesheet' />
   <link href='css/site.css' rel='stylesheet' />
+  <style>
+    .modal-content { margin-top: 20px; }
+  </style>
 </head>
 
 <body class='fill-light'>
@@ -164,7 +167,7 @@
                     <i class='icon icon-map-marker pad0r'></i>123 Sesame St, Atlanta GA 30340
                   </li>
                 </ul>
-                <a href='#fakelink' class='btn btn-default' data-toggle='modal' data-target='#modal-contact'>Edit Contact</a>
+                <a href='#fakelink' class='btn btn-default' data-toggle='modal' data-target='#modal'>Edit Contact</a>
               </section>
               <section class='pad2y keyline-bottom'>
                 <h3 class='small quiet space-bottom0'>Billing Contact</h3>
@@ -258,85 +261,116 @@
     </div>
   </div><!-- ./footer -->
 
-  <div id='modal-contact' class='animate modal'>
+  <div id='modal' class='animate modal'>
     <div class='modal-dialog'>
       <form method='post' class='container-fluid'>
         <div class='col-md-8 fill-white modal-content contain'>
-          <a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'>
-            <i class='icon icon-remove'></i>
-          </a>
-          <div class='pad2y pad4x center'>
-            <h3>Change contact information</h3>
+          <div class='pad2y pad4x keyline-bottom space-bottom clearfix'>
+            <div class='col-sm-3'>
+              <h4>Edit contact</h4>
+            </div>
+            <div class='col-sm-9 text-right tabs'>
+              <a href='#info' class='small pad0 active' data-toggle='tab'>
+                Information
+              </a>
+              <a href='#orders' class='small pad0' data-toggle='tab'>
+                Update orders
+              </a>
+            </div>
           </div>
-          <div class='space-bottom1 pad4x clearfix'>
-            <fieldset class='clearfix'>
-              <div class='btn-group'>
-                <a href='#fakelink' class='btn btn-default dropdown-toggle col-sm-12' data-toggle='dropdown'>
-                  Copy information from <span class='caret'></span>
-                </a>
-                <ul class='dropdown-menu' role='menu'>
-                  <li><a href='#fakelink'>Dan Cederholm</a></li>
-                  <li><a href='#fakelink'>Kerem Seur</a></li>
-                </ul>
-              </div>
-            </fieldset>
-            <fieldset class='col-sm-6 pad1r'>
-              <label for='contact_name'>Name</label>
-              <input id='contact_name' type='text' class='stretch' value='Kerem Seur'>
-            </fieldset>
-            <fieldset class='col-sm-6 pad1l'>
-              <label for='contact_email'>Email</label>
-              <input id='contact_email' type='text' class='stretch' value='keremseur@gmail.com'>
-            </fieldset>
-            <fieldset class='col-sm-6 pad1r'>
-              <label for='contact_phone'>Phone</label>
-              <input id='contact_phone' type='text' class='stretch' value='555-555-5555'>
-            </fieldset>
-            <fieldset class='col-sm-6 pad1l'>
-              <label for='contact_fax'>Fax</label>
-              <input id='contact_fax' type='text' class='stretch'>
-            </fieldset>
-            <fieldset>
-              <label for='contact_street'>Address</label>
-              <input id='contact_street' type='text' class='stretch' value='123 Sesame St'>
-              <small class='block quiet'>Street Address</small>
-            </fieldset>
-            <fieldset>
-              <input type='text' class='stretch'>
-              <small class='block quiet'>Address Line 2</small>
-            </fieldset>
-            <fieldset class='col-sm-6 pad1r'>
-              <input type='text' class='stretch' value='Atlanta'>
-              <small class='block quiet'>City</small>
-            </fieldset>
-            <fieldset class='col-sm-6 pad1l'>
-              <input type='text' class='stretch' value='GA'>
-              <small class='block quiet'>State / Province / Region</small>
-            </fieldset>  
-            <fieldset class='col-sm-6 pad1r'>
-              <input type='text' class='stretch' value='30340'>
-              <small class='block quiet'>Postal / Zip Code</small>
-            </fieldset>
-            <fieldset class='col-sm-6 pad1l'>
-              <div class='input-group col-sm-12'>
-                <select class='stretch'>
-                  <option>
-                    United States
-                  </option>
-                </select>
-                <i class='icon icon-chevron-down'></i>
-              </div>
-              <small class='block quiet'>Country</small>
-            </fieldset>            
+          
+          <div class='space-bottom2 tab-content sliding h' style='height: 585px;'>
+            
+            <div class='tab-pane active animate pad4x' id='info'>
+              <fieldset class='clearfix'>
+                <div class='btn-group'>
+                  <a href='#fakelink' class='btn btn-default dropdown-toggle col-sm-12 btn-xs' data-toggle='dropdown'>
+                    Copy information from <span class='caret'></span>
+                  </a>
+                  <ul class='dropdown-menu' role='menu'>
+                    <li><a href='#fakelink'>Dan Cederholm</a></li>
+                    <li><a href='#fakelink'>Kerem Seur</a></li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class='col-sm-6 pad1r'>
+                <label for='contact_name'>Name</label>
+                <input id='contact_name' type='text' class='stretch' value='Kerem Seur'>
+              </fieldset>
+              <fieldset class='col-sm-6 pad1l'>
+                <label for='contact_email'>Email</label>
+                <input id='contact_email' type='text' class='stretch' value='keremseur@gmail.com'>
+              </fieldset>
+              <fieldset class='col-sm-6 pad1r'>
+                <label for='contact_phone'>Phone</label>
+                <input id='contact_phone' type='text' class='stretch' value='555-555-5555'>
+              </fieldset>
+              <fieldset class='col-sm-6 pad1l'>
+                <label for='contact_fax'>Fax</label>
+                <input id='contact_fax' type='text' class='stretch'>
+              </fieldset>
+              <fieldset>
+                <label for='contact_street'>Address</label>
+                <input id='contact_street' type='text' class='stretch' value='123 Sesame St'>
+                <small class='block quiet'>Street Address</small>
+              </fieldset>
+              <fieldset>
+                <input type='text' class='stretch'>
+                <small class='block quiet'>Address Line 2</small>
+              </fieldset>
+              <fieldset class='col-sm-6 pad1r'>
+                <input type='text' class='stretch' value='Atlanta'>
+                <small class='block quiet'>City</small>
+              </fieldset>
+              <fieldset class='col-sm-6 pad1l'>
+                <input type='text' class='stretch' value='GA'>
+                <small class='block quiet'>State / Province / Region</small>
+              </fieldset>  
+              <fieldset class='col-sm-6 pad1r'>
+                <input type='text' class='stretch' value='30340'>
+                <small class='block quiet'>Postal / Zip Code</small>
+              </fieldset>
+              <fieldset class='col-sm-6 pad1l'>
+                <div class='input-group col-sm-12'>
+                  <select class='stretch'>
+                    <option>
+                      United States
+                    </option>
+                  </select>
+                  <i class='icon icon-chevron-down'></i>
+                </div>
+                <small class='block quiet'>Country</small>
+              </fieldset>  
+              <a href='#fakelink' class='small strong' id='update-orders'>
+                Update orders with contact information<i class='icon icon-arrow-right icon-sm'></i>
+              </a>
+            </div>
+            
+            <div class='tab-pane animate pad4x' id='orders'>
+              <fieldset>
+                <label for='website'>Website</label>
+                <input id='website' type='text' class='stretch' value='rigby.com'>
+              </fieldset>
+              <fieldset>
+                <label for='rigbybio'>Bio</label>
+                <textarea id='rigbybio' class='stretch' rows='9'>Rigby is the second of the two lead protagonists of Regular Show, along with his best friend Mordecai.
+                </textarea>
+              </fieldset>
+            </div>
           </div>
-          <div class='modal-actions fill-gray pad2y pad4x clearfix text-right'>
-            <button type='button' class='btn btn-default' data-dismiss='modal'>Cancel</button>
-            <button type='button' class='btn btn-primary' data-dismiss='modal'>Done</button>
+
+          <div class='modal-actions fill-gray pad2y pad4x text-right'>
+            <a href='#fakelink' class='btn btn-default' data-dismiss='modal'>
+              <i class='icon icon-remove pad0r'></i>Cancel
+            </a>
+            <a href='#fakelink' class='btn btn-primary' data-dismiss='modal'>
+              <i class='icon icon-floppy-disk pad0r'></i>Save
+            </a>
           </div>
         </div>      
       </form>
     </div>
-  </div><!-- ./modal-contact -->  
+  </div>   
   
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
   <script src='kabu/javascripts/kabu.js'></script>
