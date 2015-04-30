@@ -9,6 +9,8 @@
   <link href='css/site.css' rel='stylesheet' />
   <style>
     .modal-content { margin-top: 20px; }
+    .checkbox label { padding: 0; }
+    .checkbox input[type=checkbox]:checked + label { background: none; }
   </style>
 </head>
 
@@ -299,7 +301,7 @@
               </fieldset>
               <fieldset class='col-sm-6 pad1l'>
                 <label for='contact_email'>Email</label>
-                <input id='contact_email' type='text' class='stretch' value='keremseur@gmail.com'>
+                <input id='contact_email' type='email' autocorrect='off' autocapitalize='off' class='stretch mailgun' value='keremseur@gmail.com'>
               </fieldset>
               <fieldset class='col-sm-6 pad1r'>
                 <label for='contact_phone'>Phone</label>
@@ -347,15 +349,173 @@
             </div>
             
             <div class='tab-pane animate pad4x' id='orders'>
-              <fieldset>
-                <label for='website'>Website</label>
-                <input id='website' type='text' class='stretch' value='rigby.com'>
-              </fieldset>
-              <fieldset>
-                <label for='rigbybio'>Bio</label>
-                <textarea id='rigbybio' class='stretch' rows='9'>Rigby is the second of the two lead protagonists of Regular Show, along with his best friend Mordecai.
-                </textarea>
-              </fieldset>
+              <p class='quiet'>
+                Bacon ipsum dolor amet pastrami pancetta bacon, shank tri-tip frankfurter.
+              </p>
+              <fieldset class='with-icon'>
+                <span class='icon icon-search'></span>
+                <input id='filter-orders' type='text' class='stretch' value='Find orders'>
+              </fieldset>              
+              <table class='breathe'>
+                <thead>
+                  <th>
+                    <div class='checkbox'>
+                      <input id='checkall' type='checkbox'>
+                      <label for='checkall' class='small icon icon-ok'></label>
+                    </div>
+                  </th>
+                  <th class='quiet'>Order No.</th>
+                  <th class='quiet'>Sales Rep</th>
+                  <th class='quiet text-right pad1r'>Amount</th>
+                  <th class='quiet pad1l'>Product Status</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check1' type='checkbox'>
+                        <label for='check1' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check2' type='checkbox'>
+                        <label for='check2' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check3' type='checkbox'>
+                        <label for='check3' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check4' type='checkbox'>
+                        <label for='check4' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check5' type='checkbox'>
+                        <label for='check5' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check6' type='checkbox'>
+                        <label for='check6' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check7' type='checkbox'>
+                        <label for='check7' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check8' type='checkbox'>
+                        <label for='check8' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check9' type='checkbox'>
+                        <label for='check9' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check10' type='checkbox'>
+                        <label for='check10' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check11' type='checkbox'>
+                        <label for='check11' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class='checkbox'>
+                        <input id='check12' type='checkbox'>
+                        <label for='check12' class='small icon icon-ok'></label>
+                      </div>
+                    </td>                    
+                    <td><strong>CB01234567</strong></td>
+                    <td>Lovetta M. Patterson</td>
+                    <td class='text-right pad1r'>$50,000</td>
+                    <td class='pad1l'>Active</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
@@ -364,7 +524,7 @@
               <i class='icon icon-remove pad0r'></i>Cancel
             </a>
             <a href='#fakelink' class='btn btn-primary' data-dismiss='modal'>
-              <i class='icon icon-floppy-disk pad0r'></i>Save
+              <i class='icon icon-floppy-disk pad0r'></i>Save changes    
             </a>
           </div>
         </div>      
@@ -375,5 +535,7 @@
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
   <script src='kabu/javascripts/kabu.js'></script>
   <script src='js/site.js'></script>
+  <script src='js/mailgun_validator.js'></script>
+  <script src='js/emailvalidation.js'></script>  
 </body>
 </html>
