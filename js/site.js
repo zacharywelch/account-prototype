@@ -91,6 +91,7 @@
     /* New scripts */
 
     resize();
+    
     $(window).resize(function() {
       resize();
     });
@@ -98,6 +99,10 @@
     $('#update-orders').click(function() { 
       $('a[href="#orders"]').click();
     });
+
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })    
   });
 
 }).call(this);
