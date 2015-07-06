@@ -13,6 +13,7 @@
     .checkbox label { padding: 0; }
     .checkbox input[type=checkbox]:checked + label { background: none; }    
     .img-circle.pad0 { width: 30px; }
+    .hovercard { width: 245px; }
   </style>
 </head>
 
@@ -177,7 +178,7 @@
                 <div class='col-md-2 col-sm-3 pad2y'>
                   <div class='rounded-toggle inline'>
                     <input id='no' type='radio' name='rtoggle' value='no'>
-                    <label for='no'>Off</label>
+                    <label for='no' data-toggle='modal' data-target='#modal-off'>Off</label>
                     <input id='yes' type='radio' name='rtoggle' value='yes' checked='checked'>
                     <label for='yes' data-toggle='modal' data-target='#modal'>On</label>
                   </div>
@@ -191,16 +192,16 @@
               </div>
               <div class='fill-light-blue pad2x pad1y keyline-top clearfix'>
                 <p class='small col-xs-10'>
-                  <a href='#fakelink'>Kristin Howard</a> placed account on hold <strong>Jan 21, 2014</strong> because it was <strong>delinquent 90 days</strong>.<i class='icon icon-question-sign pad0x' data-toggle='tooltip' data-placement='top' title='Lorem ipsum dolor sit amet, consectetur adipisicing elit.'></i>
+                  <a href='#fakelink' data-toggle='hovercard' data-target='#hovercard'>Kerem Seur</a> placed account on hold <strong>Jan 21, 2014</strong> because it was <strong>delinquent 90 days</strong>.<i class='icon icon-question-sign pad0x' data-toggle='tooltip' data-placement='top' title='Lorem ipsum dolor sit amet, consectetur adipisicing elit.'></i>
                 </p>                
                 <div class='col-xs-2 text-right'>
-                  <a href='#fakelink' class='btn btn-default'>Edit reason</a>
+                  <a href='#fakelink' class='btn btn-default' data-toggle='modal' data-target='#modal'>Edit reason</a>
                 </div>
               </div>
             </div>
 
             <small class='pad1y quiet center'>
-              Bacon ipsum dolor amet short ribs <a href='#fakelink'>ribeye hamburger</a>.
+              Bacon ipsum dolor amet short ribs <a href='#fakelink' data-toggle='modal' data-target='#modal'>change invoices</a>.
             </small>
           
             <div class='keyline-top space-bottom'>
@@ -543,8 +544,100 @@
     </div>
   </div>  
 
+  <div id='modal-off' class='animate modal'>
+    <div class='modal-dialog'>
+      <form method='post' class='container-fluid'>
+        <div class='col-sm-6 col-xs-12 fill-white modal-content contain'>
+          <a href='#fakelink' class='quiet pin-right close' data-dismiss='modal'>
+            <i class='icon icon-remove'></i>
+          </a>
+          <div class='pad2y pad4x center'>
+            <h3>Take account off hold</h3>
+          </div>
+          <div class='space-bottom2 pad4x'>
+            <fieldset>
+              <label>Why is this account being taken off hold?</label>
+              <div class='radio space-bottom1'>
+                <input type='radio' name='reason' id='radio1' value='1'>
+                <label for='radio1' class='icon-radio-checked'>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </label>
+              </div>
+              <div class='radio space-bottom1'>
+                <input type='radio' name='reason' id='radio2' value='2' checked>
+                <label for='radio2' class='icon-radio-checked'>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </label>
+              </div>
+              <div class='radio space-bottom1'>
+                <input type='radio' name='reason' id='radio3' value='3'>
+                <label for='radio3' class='icon-radio-checked'>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </label>
+              </div>
+              <div class='radio space-bottom1'>
+                <input type='radio' name='reason' id='radio4' value='4'>
+                <label for='radio4' class='icon-radio-checked'>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <label for='comments-off'>Do you have any additional comments?</label>
+              <textarea id='comments-off' class='stretch'></textarea>
+            </fieldset>
+          </div>
+          <div class='modal-actions fill-gray pad2y pad4x text-right'>
+            <a href='#fakelink' class='btn btn-default' data-dismiss='modal'>Cancel</a>
+            <a href='settings.html' class='btn btn-primary'>Take off hold</a>
+          </div>
+        </div>      
+      </form>
+    </div>
+  </div>
+
+  <div id='hovercard' class='box round center fill-white lift contain clearfix hovercard clip hidden' style='position:absolute'>
+    <div class='row6 fill-blue round-top pin-top'></div>
+    <div class='contain space-bottom1 row7'>
+      <img src='/img/kerem.png' class='pin-bottom img-circle' width='80'>
+    </div>
+    <h3>Kerem Seur</h3>
+    <h5 class='quiet'>Accounts Receivable</h5>
+    <h5 class='quiet'>Chicago, IL</h5>
+    <div class='pad2 space-bottom1'>
+      <a href='#fakelink' class='btn btn-primary'>Become</a>
+    </div>
+    <a href='#fakelink' class='block quiet col-xs-6 pad1y pad2x keyline-top keyline-right fill-light'>
+      <i class='icon icon-phone pad0r'></i>Call
+    </a>              
+    <a href='#fakelink' class='block quiet col-xs-6 pad1y pad2x keyline-top fill-light'>
+      <i class='icon icon-envelope pad0r'></i>Message
+    </a>              
+  </div>  
+
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ></script>
   <script src='kabu/javascripts/kabu.js'></script>
   <script src='js/site.js'></script>
+  <script src='js/jquery.hoverIntent.minified.js'></script>
+  <script>
+    $(function() {
+      $('[data-toggle="hovercard"]').hoverIntent({
+        over: showCard,
+        interval: 300
+      });
+
+      $('.hovercard').hover(
+        function() { $(this).removeClass('hidden') },
+        function() { $(this).addClass('hidden') }
+      );
+    });
+
+    function showCard() { 
+      var offset = $(this).offset();
+      var target = $(this).data('target')
+      $(target).css({ top: offset.top + 25, left: offset.left })
+        .removeClass('hidden');
+    }
+  </script>  
 </body>
 </html>
