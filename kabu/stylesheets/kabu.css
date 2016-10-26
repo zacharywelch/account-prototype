@@ -816,62 +816,66 @@ table {
 .icon-clipboard,
 .icon-inbox-alt,
 .icon-inbox,
-.icon-briefcase {
+.icon-briefcase,
+.icon-unlock {
   font-family: 'CB Icons';
   top: 0;
   vertical-align: baseline;
 }
 /* Individual Icons */
-.icon-asc:before {
-  content: "\e000";
-}
 .icon-desc:before {
-  content: "\e004";
+  content: "\e900";
 }
-.icon-ok-sign:before {
-  content: "\e007";
-}
-.icon-ok:before {
-  content: "\e00a";
-}
-.icon-list:before {
-  content: "\e00c";
-}
-.icon-remove:before {
-  content: "\e00d";
-}
-.icon-calendar:before {
-  content: "\e024";
-}
-.icon-folder:before {
-  content: "\e029";
-}
-.icon-remove-sign:before {
-  content: "\e02b";
-}
-.icon-plus-sign:before {
-  content: "\e032";
-}
-.icon-customer:before {
-  content: "\e600";
+.icon-asc:before {
+  content: "\e901";
 }
 .icon-bill:before {
-  content: "\e601";
-}
-.icon-journal:before {
-  content: "\e602";
-}
-.icon-clipboard:before {
-  content: "\e603";
-}
-.icon-inbox-alt:before {
-  content: "\e607";
-}
-.icon-inbox:before {
-  content: "\e608";
+  content: "\e902";
 }
 .icon-briefcase:before {
-  content: "\e609";
+  content: "\e903";
+}
+.icon-calendar:before {
+  content: "\e904";
+}
+.icon-clipboard:before {
+  content: "\e905";
+}
+.icon-customer:before {
+  content: "\e906";
+}
+.icon-inbox-alt:before {
+  content: "\e907";
+}
+.icon-inbox:before {
+  content: "\e908";
+}
+.icon-journal:before {
+  content: "\e909";
+}
+.icon-list:before {
+  content: "\e90a";
+}
+.icon-ok-sign:before {
+  content: "\e90b";
+}
+.icon-ok:before {
+  content: "\e90c";
+}
+.icon-plus-sign:before {
+  content: "\e90d";
+}
+.icon-remove-sign:before {
+  content: "\e90e";
+}
+.icon-remove:before {
+  content: "\e90f";
+}
+.icon-unlock:before {
+  content: "\e910";
+}
+.icon-folder:before {
+  content: "\e911";
 }
 /* Icon sizes */
 .icon-md {
@@ -912,13 +916,13 @@ table {
 }
 /* Credit card icons */
 .credit-card {
-  background: url('../images/credit-cards@2x.png') 0 0 no-repeat;
+  background: url('../images/credit-cards@2x.png') -440px 0 no-repeat;
   height: 30px;
   width: 45px;
   display: inline-block;
   vertical-align: top;
-  -webkit-background-size: 430px 70px;
-  background-size: 430px 70px;
+  -webkit-background-size: 485px 70px;
+  background-size: 485px 70px;
 }
 .credit-card.visa {
   background-position: 0      0;
@@ -943,6 +947,9 @@ table {
 }
 .credit-card.direct-debit {
   background-position: -385px 0;
+}
+.credit-card.disabled {
+  background-position: -440px -40px;
 }
 .credit-card.disabled.visa {
   background-position: 0 -40px;
@@ -1077,13 +1084,6 @@ hr {
 ------------------------------------------------------- */
 /* @FontFace */
 @font-face {
-  font-family: 'Lobster';
-  src: url('../fonts/lobster/lobster_1.3-webfont.eot');
-  src: url('../fonts/lobster/lobster_1.3-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/lobster/lobster_1.3-webfont.woff') format('woff'), url('../fonts/lobster/lobster_1.3-webfont.ttf') format('truetype'), url('../fonts/lobster/lobster_1.3-webfont.svg#lobster_1.3regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Bitter Bold';
   src: url('../fonts/bitter/bitter-bold.eot');
   src: url('../fonts/bitter/bitter-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/bitter/bitter-bold.woff') format('woff'), url('../fonts/bitter/bitter-bold.ttf') format('truetype'), url('../fonts/bitter/bitter-bold.svg#bitter_bold') format('svg');
@@ -1092,13 +1092,20 @@ hr {
 }
 @font-face {
   font-family: 'Open Sans Bold';
+  src: url('../fonts/opensans/opensans-bold.eot');
+  src: url('../fonts/opensans/opensans-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/opensans-bold.woff') format('woff'), url('../fonts/opensans/opensans-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Open Sans Semibold';
   src: url('../fonts/opensans/opensans-semibold.eot');
   src: url('../fonts/opensans/opensans-semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/opensans-semibold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Open Sans Bold Italic';
+  font-family: 'Open Sans Semibold Italic';
   src: url('../fonts/opensans/opensans-semibolditalic.eot');
   src: url('../fonts/opensans/opensans-semibolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/opensans/opensans-semibolditalic.woff') format('woff'), url('../fonts/opensans/opensans-semibolditalic.ttf') format('truetype');
   font-weight: bold;
@@ -1125,7 +1132,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: 'Open Sans Semibold', sans-serif;
   font-weight: normal;
   margin: 0;
 }
@@ -1136,6 +1143,9 @@ h4.small,
 h5.small,
 h6.small {
   text-transform: uppercase;
+}
+h1 {
+  font-family: 'Open Sans Bold', sans-serif;
 }
 em h1,
 h1 em,
@@ -1149,12 +1159,11 @@ em h5,
 h5 em,
 em h6,
 h6 em {
-  font-family: 'Open Sans Bold Italic', sans-serif;
+  font-family: 'Open Sans Semibold Italic', sans-serif;
 }
 h1 {
   font-size: 30px;
   line-height: 40px;
-  letter-spacing: -1px;
 }
 h2 {
   font-size: 22px;
@@ -1203,12 +1212,12 @@ small {
 }
 .strong,
 strong {
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: 'Open Sans Semibold', sans-serif;
   font-weight: normal;
 }
 strong em,
 em strong {
-  font-family: 'Open Sans Bold Italic', sans-serif;
+  font-family: 'Open Sans Semibold Italic', sans-serif;
 }
 address,
 em {
@@ -1217,7 +1226,8 @@ em {
 /* Fancy font style */
 h1.fancy,
 h2.fancy,
-h3.fancy {
+h3.fancy,
+h4.fancy {
   font-family: 'Bitter Bold', 'Georgia', serif;
 }
 h1.fancy {
@@ -1236,6 +1246,10 @@ h3.fancy {
   font-size: 26px;
   letter-spacing: 2px;
   line-height: 40px;
+}
+h4.fancy {
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 /* Alignment */
 .text-left {
@@ -1496,14 +1510,25 @@ ol.bullet li {
 }
 table.prose,
 .prose table {
-  border: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 table.prose th,
 table.prose td,
 .prose table th,
 .prose table td {
-  padding: 8px;
-  border: 1px solid #ddd;
+  padding: 12px 0;
+}
+table.prose th:first-child,
+table.prose td:first-child,
+.prose table th:first-child,
+.prose table td:first-child {
+  padding-left: 20px;
+}
+table.prose th:last-child,
+table.prose td:last-child,
+.prose table th:last-child,
+.prose table td:last-child {
+  padding-right: 20px;
 }
 table.prose th,
 .prose table th {
@@ -2358,14 +2383,11 @@ table th,
 table td {
   padding: 4px 0;
   text-align: left;
-  vertical-align: top;
+  vertical-align: middle;
   border-bottom: 1px solid #ddd;
 }
 table th {
-  font-family: 'Open Sans Bold', sans-serif;
-}
-table thead th {
-  vertical-align: bottom;
+  font-family: 'Open Sans Semibold', sans-serif;
 }
 table.fixed {
   table-layout: fixed;
@@ -2379,7 +2401,7 @@ form fieldset:last-child {
   margin-bottom: 0;
 }
 form fieldset label {
-  font: 12px/20px 'Open Sans Bold', sans-serif;
+  font: 12px/20px 'Open Sans Semibold', sans-serif;
   display: block;
   margin: 0 0 5px;
 }
@@ -2443,7 +2465,14 @@ input[type=text]:focus,
 input[type=email]:focus,
 input[type=number]:focus,
 select:focus,
-.form-control:focus {
+.form-control:focus,
+textarea.focus,
+input[type=password].focus,
+input[type=text].focus,
+input[type=email].focus,
+input[type=number].focus,
+select.focus,
+.form-control.focus {
   outline: thin dotted\8;
   /* ie8 below */
   border-color: rgba(0, 0, 0, 0.25);
@@ -2580,6 +2609,16 @@ select + .icon {
   filter: alpha(opacity=7500);
   text-align: center;
 }
+.checkbox.disabled {
+  cursor: not-allowed;
+}
+.checkbox.disabled label {
+  color: rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+.checkbox.disabled .icon:before {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset;
+}
 .dark.checkbox .icon:before,
 .dark .checkbox .icon:before {
   background-color: rgba(0, 0, 0, 0.25);
@@ -2662,9 +2701,10 @@ form fieldset.with-error > label {
 /* Buttons
 ------------------------------------------------------- */
 .btn,
-.btn-large,
+.btn-lg,
 .btn-sm,
-.btn-group-sm > .btn {
+.btn-group-sm > .btn,
+.btn-group-lg > .btn {
   text-align: center;
   display: inline-block;
   height: 40px;
@@ -2674,7 +2714,7 @@ form fieldset.with-error > label {
   white-space: nowrap;
   text-overflow: ellipsis;
   /* Protects button metrics in .prose context */
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: 'Open Sans Semibold', sans-serif;
   padding: 10px 10px;
   font-size: 12px;
   line-height: 20px;
@@ -2688,34 +2728,34 @@ form fieldset.with-error > label {
   -webkit-font-smoothing: antialiased;
 }
 .btn:focus,
-.btn-large:focus,
+.btn-lg:focus,
 .btn-sm:focus,
 .btn:active:focus,
-.btn-large:active:focus,
+.btn-lg:active:focus,
 .btn-sm:active:focus,
 .btn.active:focus,
-.btn-large.active:focus,
+.btn-lg.active:focus,
 .btn-sm.active:focus {
   -webkit-box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 .btn:hover,
-.btn-large:hover,
+.btn-lg:hover,
 .btn-sm:hover,
 .btn:focus,
-.btn-large:focus,
+.btn-lg:focus,
 .btn-sm:focus {
   color: #ffffff;
   text-decoration: none;
 }
 .btn.disabled,
-.btn-large.disabled,
+.btn-lg.disabled,
 .btn-sm.disabled,
 .btn[disabled],
-.btn-large[disabled],
+.btn-lg[disabled],
 .btn-sm[disabled],
 fieldset[disabled] .btn,
-fieldset[disabled] .btn-large,
+fieldset[disabled] .btn-lg,
 fieldset[disabled] .btn-sm {
   background: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.25);
@@ -2723,24 +2763,24 @@ fieldset[disabled] .btn-sm {
   pointer-events: none;
 }
 .btn.disabled:hover,
-.btn-large.disabled:hover,
+.btn-lg.disabled:hover,
 .btn-sm.disabled:hover,
 .btn[disabled]:hover,
-.btn-large[disabled]:hover,
+.btn-lg[disabled]:hover,
 .btn-sm[disabled]:hover,
 fieldset[disabled] .btn:hover,
-fieldset[disabled] .btn-large:hover,
+fieldset[disabled] .btn-lg:hover,
 fieldset[disabled] .btn-sm:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 .btn.disabled:focus,
-.btn-large.disabled:focus,
+.btn-lg.disabled:focus,
 .btn-sm.disabled:focus,
 .btn[disabled]:focus,
-.btn-large[disabled]:focus,
+.btn-lg[disabled]:focus,
 .btn-sm[disabled]:focus,
 fieldset[disabled] .btn:focus,
-fieldset[disabled] .btn-large:focus,
+fieldset[disabled] .btn-lg:focus,
 fieldset[disabled] .btn-sm:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -3723,8 +3763,8 @@ fieldset.with-icon .icon.clear {
 /* Navbar requires markup that's different from Bootstrap
 ------------------------------------------------------- */
 .logo {
-  font-family: 'Lobster', 'Bitter Bold', 'Georgia', serif;
-  font-size: 29px;
+  font-family: 'Bitter Bold', 'Georgia', serif;
+  font-size: 26px;
   color: #3bb2d0;
   display: inline-block;
   vertical-align: top;
@@ -3853,7 +3893,15 @@ fieldset.with-icon .icon.clear {
   background: #56b881;
 }
 .alert-danger {
-  background: #ee8a65;
+  background: #ee6565;
+}
+.alert-success,
+.alert-danger,
+.alert-success .close,
+.alert-danger .close,
+.alert-success .close:hover,
+.alert-danger .close:hover {
+  color: #fff;
 }
 .prose .alert,
 .alert.prose {
@@ -3892,7 +3940,7 @@ button.close {
 .close {
   opacity: 0.3;
   filter: alpha(opacity=30);
-  font-family: 'Open Sans Bold', sans-serif;
+  font-family: 'Open Sans Semibold', sans-serif;
 }
 .pin-right.close {
   height: 40px;
@@ -3900,6 +3948,9 @@ button.close {
   line-height: 40px;
   text-align: center;
   font-size: 15px;
+}
+.dark .close {
+  color: #fff;
 }
 /* Popup
 -------------------------------------------------- */
@@ -4299,6 +4350,60 @@ fieldset.with-icon > .twitter-typeahead > input[type=text].short {
   cursor: default;
   color: #7f7f7f;
   opacity: .3;
+}
+/* Based on bootstrap-tagsinput v0.8.0
+------------------------------------------------------- */
+.bootstrap-tagsinput {
+  padding: 6px 1px 1px 6px;
+  font-size: 0;
+  height: auto;
+}
+.bootstrap-tagsinput .tag {
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 5px 5px 0;
+}
+.bootstrap-tagsinput .tag [data-role="remove"] {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.bootstrap-tagsinput .tag:hover > span {
+  background: rgba(0, 0, 0, 0.25);
+  padding-right: 28px;
+  padding-left: 14px;
+}
+.bootstrap-tagsinput .tag:hover [data-role="remove"] {
+  opacity: 1;
+  filter: none;
+}
+.bootstrap-tagsinput input[type="text"] {
+  border: none;
+  padding: 0;
+  width: auto !important;
+  max-width: inherit;
+  min-width: 80px;
+  height: 30px;
+}
+.bootstrap-tagsinput input[type="text"]:first-child {
+  height: 23px;
+  margin: 4px 0 8px 4px;
+}
+.bootstrap-tagsinput .twitter-typeahead {
+  width: auto;
+  vertical-align: top;
+}
+.bootstrap-tagsinput .twitter-typeahead .tt-input {
+  min-width: 200px;
+  height: 23px;
+  margin: 4px 0 8px 4px;
+}
+.bootstrap-tagsinput .twitter-typeahead .tt-dropdown-menu {
+  width: auto;
+  min-width: 120px;
+  margin: 4px 0 0 -8px;
 }
 /* Modals
 ------------------------------------------------------- */
@@ -4909,7 +5014,7 @@ fieldset.with-icon > .twitter-typeahead > input[type=text].short {
 .unround {
   border-radius: 0;
 }
-/* Fixed containers
+/* Absolute and Fixed containers
 ------------------------------------------------------- */
 .pin-top,
 .pin-right,
@@ -4921,39 +5026,57 @@ fieldset.with-icon > .twitter-typeahead > input[type=text].short {
 .pin-bottomright {
   position: absolute;
 }
-.pin-bottom {
+.fix-top,
+.fix-right,
+.fix-bottom,
+.fix-left,
+.fix-topleft,
+.fix-topright,
+.fix-bottomleft,
+.fix-bottomright {
+  position: fixed;
+}
+.pin-bottom,
+.fix-bottom {
   right: 0;
   bottom: 0;
   left: 0;
 }
-.pin-top {
+.pin-top,
+.fix-top {
   top: 0;
   right: 0;
   left: 0;
 }
-.pin-left {
+.pin-left,
+.fix-left {
   top: 0;
   bottom: 0;
   left: 0;
 }
-.pin-right {
+.pin-right,
+.fix-right {
   top: 0;
   right: 0;
   bottom: 0;
 }
-.pin-bottomright {
+.pin-bottomright,
+.fix-bottomright {
   bottom: 0;
   right: 0;
 }
-.pin-bottomleft {
+.pin-bottomleft,
+.fix-bottomleft {
   bottom: 0;
   left: 0;
 }
-.pin-topright {
+.pin-topright,
+.fix-topright {
   top: 0;
   right: 0;
 }
-.pin-topleft {
+.pin-topleft,
+.fix-topleft {
   top: 0;
   left: 0;
 }
@@ -4964,6 +5087,9 @@ fieldset.with-icon > .twitter-typeahead > input[type=text].short {
   white-space: nowrap;
   overflow: hidden;
 }
+.strike {
+  text-decoration: line-through;
+}
 .clip {
   overflow: hidden;
 }
@@ -4973,6 +5099,12 @@ fieldset.with-icon > .twitter-typeahead > input[type=text].short {
 .lift {
   -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 img.inline,
 .inline {
